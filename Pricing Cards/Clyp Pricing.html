@@ -1,0 +1,524 @@
+<head>
+<style>
+
+
+.pricing-card-set{
+	display: inline-flex;
+}
+
+
+.basic-card{
+	padding: 0px 12px 0px 0px;
+	
+
+}
+
+.plus-card{
+	padding: 0px 12px 0px 12px;
+}
+
+.pro-card{
+	padding: 0px 12px 0px 12px;
+}
+
+
+.pricing-card{
+	width: 300px;
+	border-radius: 4px;
+	border: 1px solid #E4E5E5;
+}
+
+.pricing-card-hero{
+	display: flex;
+	position: relative;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.pricing-card-hero.basic{
+	background: #8C95A0;
+}
+
+.pricing-card-hero.plus{
+	background: linear-gradient(to right, #3DBEB3, #2ABFDC);
+}
+
+.pricing-card-hero.pro{
+	background: linear-gradient(to right, #E33574, #5A3F8C);
+}
+
+.pricing-card-hero.selected{
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjMwcHgiIGhlaWdodD0iMzBweCIgdmlld0JveD0iMCAwIDMwIDMwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0MS4xICgzNTM3NikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iQ2x5cC0zLjAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJNaXNjLi1QYWdlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMjEuMDAwMDAwLCAtMzQxLjAwMDAwMCkiIGZpbGw9IiNGREZGRkMiPgogICAgICAgICAgICA8ZyBpZD0iUHJlbWl1bS1jb21pbmctc29vbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDYzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IlBSTyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTE0LjAwMDAwMCwgMjcwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zMjIsOCBDMzEzLjcxNDI4Niw4IDMwNywxNC43MTQyODU3IDMwNywyMyBDMzA3LDMxLjI4NTcxNDMgMzEzLjcxNDI4NiwzOCAzMjIsMzggQzMzMC4yODU3MTQsMzggMzM3LDMxLjI4NTcxNDMgMzM3LDIzIEMzMzcsMTQuNzE0Mjg1NyAzMzAuMjg1NzE0LDggMzIyLDggWiBNMzI4LjcxNDI4NiwyMC4zMjA2MTkgTDMyMS4xNDI4NTcsMjcuNDYzNDc2MiBDMzIwLjU3MTQyOSwyNy45NjM0NzYyIDMxOS43MTQyODYsMjcuOTYzNDc2MiAzMTkuMTQyODU3LDI3LjM5MjA0NzYgTDMxNS4yODU3MTQsMjMuNDYzNDc2MiBDMzE0LjcxNDI4NiwyMi44OTIwNDc2IDMxNC43MTQyODYsMjEuOTYzNDc2MiAzMTUuMjg1NzE0LDIxLjQ2MzQ3NjIgQzMxNS44NTcxNDMsMjAuOTYzNDc2MiAzMTYuNzg1NzE0LDIwLjg5MjA0NzYgMzE3LjI4NTcxNCwyMS40NjM0NzYyIEwzMjAuMTQyODU3LDI0LjM5MjA0NzYgTDMyNi43MTQyODYsMTguMjQ5MTkwNSBDMzI3LjM1NzE0MywxNy44MjA2MTkgMzI4LjIxNDI4NiwxNy45NjM0NzYyIDMyOC43MTQyODYsMTguNTM0OTA0NyBDMzI5LjE0Mjg1NywxOS4wMzQ5MDQ3IDMyOS4xNDI4NTcsMTkuNzQ5MTkwNSAzMjguNzE0Mjg2LDIwLjMyMDYxOSBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 20px;
+	width: 20px;
+}
+
+.hero-ribbon {
+  position: absolute;
+  left: 0px; top: 0px;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  
+ }
+.hero-ribbon span {
+  font-size: 10px;
+  color: #FFF;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #5F6D7A;
+  position: absolute;
+  top: 19px; left: -21px;
+}
+
+
+.pricing-card-features{
+	padding: 20px 5px 25px 25px;
+	
+
+}
+
+
+.pricing-plan{
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+.pricing-amount{
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.pricing-frequency{
+	font-size: 13px;
+	text-transform: lowercase;
+}
+
+.pricing-card-feature{
+	padding-bottom: 15px;
+
+}
+
+.feature-check{
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDE4IDE0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0MSAoMzUzMjYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IkNseXAtMy4wIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iTWlzYy4tUGFnZXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01OTMuMDAwMDAwLCAtNTc3LjAwMDAwMCkiIHN0cm9rZT0iIzNEQkVCMyIgZmlsbD0iIzNEQkVCMyI+CiAgICAgICAgICAgIDxnIGlkPSJQcmVtaXVtLWNvbWluZy1zb29uIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCwgNjMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0icGx1cyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTQ3LjAwMDAwMCwgMjcwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJmZWF0dXJlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDQuMDAwMDAwLCAxNDkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSJwcm9maWxlLVVSTCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMy4wMDAwMDAsIDkzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTYuMDAwMjUsMTQuOTk5NTUzNSBDNS43MzUyNSwxNC45OTk1NTM1IDUuNDgwMjUsMTQuODk0NTUzNSA1LjI5MzI1LDE0LjcwNjU1MzUgTDAuMjkzMjUsOS43MDY1NTM1MSBDLTAuMDk3NzUsOS4zMTU1NTM1MSAtMC4wOTc3NSw4LjY4MzU1MzUxIDAuMjkzMjUsOC4yOTI1NTM1MSBDMC42ODQyNSw3LjkwMTU1MzUxIDEuMzE2MjUsNy45MDE1NTM1MSAxLjcwNzI1LDguMjkyNTUzNTEgTDUuOTYyMjUsMTIuNTQ3NTUzNSBMMTQuMjU3MjUsMy4zMzA1NTM1MSBDMTQuNjI3MjUsMi45MjE1NTM1MSAxNS4yNTkyNSwyLjg4NjU1MzUxIDE1LjY2OTI1LDMuMjU2NTUzNTEgQzE2LjA3OTI1LDMuNjI1NTUzNTEgMTYuMTEyMjUsNC4yNTc1NTM1MSAxNS43NDMyNSw0LjY2ODU1MzUxIEw2Ljc0MzI1LDE0LjY2ODU1MzUgQzYuNTYwMjUsMTQuODcyNTUzNSA2LjMwMDI1LDE0Ljk5MTU1MzUgNi4wMjYyNSwxNC45OTk1NTM1IEw2LjAwMDI1LDE0Ljk5OTU1MzUgTDYuMDAwMjUsMTQuOTk5NTUzNSBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+	background-repeat: no-repeat;
+	height: 14px;
+	width: 18px;
+	display: inline-block;
+}
+
+.feature-x{
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE0cHgiIGhlaWdodD0iMTRweCIgdmlld0JveD0iMCAwIDE0IDE0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0MSAoMzUzMjYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlBhdGg8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iQ2x5cC0zLjAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJNaXNjLi1QYWdlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU5Ny4wMDAwMDAsIC01NzcuMDAwMDAwKSIgc3Ryb2tlPSIjRTI2NjVBIiBmaWxsPSIjRTI2NjVBIj4KICAgICAgICAgICAgPGcgaWQ9IlByZW1pdW0tY29taW5nLXNvb24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCA2My4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJwbHVzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1NDcuMDAwMDAwLCAyNzAuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPGcgaWQ9ImZlYXR1cmVzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NC4wMDAwMDAsIDE0OS4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9InByb2ZpbGUtVVJMIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzLjAwMDAwMCwgOTMuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTEuMTU2NTM3Niw5LjAwMTk2NDQxIEwxNS43NTkxMTU1LDQuMzk5ODc3NjQgQzE2LjA4MTI3NjMsNC4wNzc3MTY4NSAxNi4wNzkzMTE5LDMuNTYxNTcyMDEgMTUuNzU5MTE1NSwzLjI0MDg4NDUyIEMxNS40Mzg0MjgsMi45MTg3MjM3MyAxNC45MjIyODMxLDIuOTIyNjUyNSAxNC42MDIwODY3LDMuMjQwODg0NTIgTDEwLDcuODQyOTcxMjQgTDUuMzk3OTEzMjgsMy4yNDA4ODQ1MiBDNS4wNzU3NTI0NCwyLjkxODcyMzczIDQuNTU5NjA3NjUsMi45MjA2ODgwOSA0LjI0MDg4NDUyLDMuMjQwODg0NTIgQzMuOTE4NzIzNzMsMy41NjM1MzY0MiAzLjkyMDY4ODA5LDQuMDc5MTkwMTUgNC4yNDA4ODQ1Miw0LjM5OTg3NzY0IEw4Ljg0MzQ2MjM2LDkuMDAxOTY0NDEgTDQuMjQwODg0NTIsMTMuNjAyMDg2NyBDMy45MTg3MjM3MywxMy45MjQyNDc2IDMuOTIwNjg4MDksMTQuNDQwMzkyNCA0LjI0MDg4NDUyLDE0Ljc2MDU4ODggQzQuNTYxNTcyMDEsMTUuMDgzMjQwNyA1LjA3NzcxNjg1LDE1LjA4MTI3NjMgNS4zOTc5MTMyOCwxNC43NjA1ODg4IEwxMCwxMC4xNTg1MDIxIEwxNC42MDIwODY3LDE0Ljc2MDU4ODggQzE0LjkyNDI0NzYsMTUuMDgzMjQwNyAxNS40NDAzOTI0LDE1LjA4MTI3NjMgMTUuNzU5MTE1NSwxNC43NjA1ODg4IEMxNi4wODEyNzYzLDE0LjQzODQyOCAxNi4wNzkzMTE5LDEzLjkyMjI4MzEgMTUuNzU5MTE1NSwxMy42MDIwODY3IEwxMS4xNTY1Mzc2LDkuMDAxOTY0NDEgWiIgaWQ9IlBhdGgiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+	background-repeat: no-repeat;
+	height: 14px;
+	width: 18px;
+	display: inline-block;
+
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<span class="pricing-card-set">
+
+<!---Basic Pricing Card -->
+
+	<div class="basic-card">
+	<div class="pricing-card">
+
+		<div class="pricing-card-hero basic">
+				<div class="pricing-card-hero selected">
+				</div>
+				<div class="pricing-plan">
+					Basic
+				</div>
+				<div class="pricing-amount">
+					$0
+				</div>
+				<div class="pricing-frequency">
+					Forever
+				</div>
+				
+		</div>
+
+		<div class="pricing-card-features">
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Unlimited uploads
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Ad-free
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Larger upload limit
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Custom profile link
+				</span>
+				
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Custom Clyp links
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Password-protected Clyps
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Lossless streaming
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				High-quality file downloads (.WAV)
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Advanced stats via Google Analytics
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Customized widgets
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				PRO badge
+				</span>
+			</div>
+
+		</div>
+
+	</div>
+	</div>	
+
+	<!---Plus Pricing Card -->
+
+	<div class="plus-card">
+	<div class="pricing-card">
+		
+		<div class="pricing-card-hero plus">
+				<div class="pricing-card-hero selected">
+				</div>
+				<div class="hero-ribbon">
+					<span>
+						Coming Soon
+					</span>
+				</div>
+				<div class="pricing-plan">
+					Plus
+				</div>
+				<div class="pricing-amount">
+					$6
+				</div>
+				<div class="pricing-frequency">
+					Per month
+				</div>
+				
+		</div>
+
+		<div class="pricing-card-features">
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Unlimited uploads
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Ad-free
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Larger upload limit (250mb)
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Custom profile link
+				</span>
+				
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Custom Clyp links
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Password-protected Clyps
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Lossless streaming
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				High-quality file downloads (.WAV)
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Advanced stats via Google Analytics
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				Customized widgets
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-x">
+				</span>
+				<span class="feature-text">
+				PRO badge
+				</span>
+			</div>
+
+		</div>
+
+	</div>
+	</div>	
+
+	<!---PRO Pricing Card -->
+
+	<div class="pro-card">
+	<div class="pricing-card">
+
+		<div class="pricing-card-hero pro">
+				<div class="pricing-card-hero selected">
+				</div>
+				<div class = "hero-ribbon">
+					<span>
+						Coming Soon
+					</span>
+				</div>
+				<div class="pricing-plan">
+					Pro
+				</div>
+				<div class="pricing-amount">
+					$19
+				</div>
+				<div class="pricing-frequency">
+					Per month
+				</div>
+			
+		</div>
+
+		<div class="pricing-card-features">
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Unlimited uploads
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Ad-free
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Larger upload limit (1GB)
+				</span>
+
+			</div>
+
+			<div class="pricing-card-feature">
+
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Custom profile link
+				</span>
+				
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Custom Clyp links
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Password-protected Clyps
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Lossless streaming
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				High-quality file downloads (.WAV)
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Advanced stats via Google Analytics
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				Customized widgets
+				</span>
+			</div>
+
+			<div class="pricing-card-feature">
+				<span class="feature-check">
+				</span>
+				<span class="feature-text">
+				PRO badge
+				</span>
+			</div>
+
+		</div>
+
+	</div>
+	</div>	
+
+</span>	
+
+
+
+</body>
