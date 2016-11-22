@@ -1,16 +1,12 @@
 <head>
 <style>
 
-
 .pricing-card-set{
 	display: inline-flex;
 }
 
-
 .basic-card{
 	padding: 0px 12px 0px 0px;
-	
-
 }
 
 .plus-card{
@@ -20,7 +16,6 @@
 .pro-card{
 	padding: 0px 12px 0px 12px;
 }
-
 
 .pricing-card{
 	width: 300px;
@@ -51,14 +46,18 @@
 	background: linear-gradient(to right, #E33574, #5A3F8C);
 }
 
-.pricing-card-hero.selected{
+.pricing-card.selected .pricing-card-check{
 	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjMwcHgiIGhlaWdodD0iMzBweCIgdmlld0JveD0iMCAwIDMwIDMwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0MS4xICgzNTM3NikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iQ2x5cC0zLjAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJNaXNjLi1QYWdlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMjEuMDAwMDAwLCAtMzQxLjAwMDAwMCkiIGZpbGw9IiNGREZGRkMiPgogICAgICAgICAgICA8ZyBpZD0iUHJlbWl1bS1jb21pbmctc29vbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDYzLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IlBSTyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOTE0LjAwMDAwMCwgMjcwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zMjIsOCBDMzEzLjcxNDI4Niw4IDMwNywxNC43MTQyODU3IDMwNywyMyBDMzA3LDMxLjI4NTcxNDMgMzEzLjcxNDI4NiwzOCAzMjIsMzggQzMzMC4yODU3MTQsMzggMzM3LDMxLjI4NTcxNDMgMzM3LDIzIEMzMzcsMTQuNzE0Mjg1NyAzMzAuMjg1NzE0LDggMzIyLDggWiBNMzI4LjcxNDI4NiwyMC4zMjA2MTkgTDMyMS4xNDI4NTcsMjcuNDYzNDc2MiBDMzIwLjU3MTQyOSwyNy45NjM0NzYyIDMxOS43MTQyODYsMjcuOTYzNDc2MiAzMTkuMTQyODU3LDI3LjM5MjA0NzYgTDMxNS4yODU3MTQsMjMuNDYzNDc2MiBDMzE0LjcxNDI4NiwyMi44OTIwNDc2IDMxNC43MTQyODYsMjEuOTYzNDc2MiAzMTUuMjg1NzE0LDIxLjQ2MzQ3NjIgQzMxNS44NTcxNDMsMjAuOTYzNDc2MiAzMTYuNzg1NzE0LDIwLjg5MjA0NzYgMzE3LjI4NTcxNCwyMS40NjM0NzYyIEwzMjAuMTQyODU3LDI0LjM5MjA0NzYgTDMyNi43MTQyODYsMTguMjQ5MTkwNSBDMzI3LjM1NzE0MywxNy44MjA2MTkgMzI4LjIxNDI4NiwxNy45NjM0NzYyIDMyOC43MTQyODYsMTguNTM0OTA0NyBDMzI5LjE0Mjg1NywxOS4wMzQ5MDQ3IDMyOS4xNDI4NTcsMTkuNzQ5MTkwNSAzMjguNzE0Mjg2LDIwLjMyMDYxOSBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
 	background-repeat: no-repeat;
 	position: absolute;
 	top: 5px;
 	right: 5px;
-	height: 20px;
-	width: 20px;
+	height: 30px;
+	width: 30px;
+}
+
+.pricing-card.selected{
+	box-shadow: 0px 0px 16px #D1D6DA;
 }
 
 .hero-ribbon {
@@ -66,8 +65,8 @@
   left: 0px; top: 0px;
   overflow: hidden;
   width: 75px; height: 75px;
-  
  }
+
 .hero-ribbon span {
   font-size: 10px;
   color: #FFF;
@@ -82,13 +81,9 @@
   top: 19px; left: -21px;
 }
 
-
 .pricing-card-features{
 	padding: 20px 5px 25px 25px;
-	
-
 }
-
 
 .pricing-plan{
 	font-size: 16px;
@@ -108,7 +103,6 @@
 
 .pricing-card-feature{
 	padding-bottom: 15px;
-
 }
 
 .feature-check{
@@ -125,12 +119,10 @@
 	height: 14px;
 	width: 18px;
 	display: inline-block;
-
 }
 
 
 </style>
-
 
 </head>
 
@@ -141,10 +133,10 @@
 <!---Basic Pricing Card -->
 
 	<div class="basic-card">
-	<div class="pricing-card">
+	<div class="pricing-card selected">
 
 		<div class="pricing-card-hero basic">
-				<div class="pricing-card-hero selected">
+				<div class="pricing-card-check">
 				</div>
 				<div class="pricing-plan">
 					Basic
@@ -264,10 +256,10 @@
 	<!---Plus Pricing Card -->
 
 	<div class="plus-card">
-	<div class="pricing-card">
+	<div class="pricing-card selected">
 		
 		<div class="pricing-card-hero plus">
-				<div class="pricing-card-hero selected">
+				<div class="pricing-card-check">
 				</div>
 				<div class="hero-ribbon">
 					<span>
@@ -392,10 +384,10 @@
 	<!---PRO Pricing Card -->
 
 	<div class="pro-card">
-	<div class="pricing-card">
+	<div class="pricing-card selected">
 
 		<div class="pricing-card-hero pro">
-				<div class="pricing-card-hero selected">
+				<div class="pricing-card-check">
 				</div>
 				<div class = "hero-ribbon">
 					<span>
